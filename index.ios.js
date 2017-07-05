@@ -1,7 +1,20 @@
+// @flow
+import React from "react";
 import { AppRegistry } from "react-native";
-import { DrawerNavigator } from "react-navigation";
-import Routes from "./routes";
+import { Provider } from "react-redux";
 
-const StarterApp = DrawerNavigator(Routes);
+import getStore from "./src/store";
+import AppWithNavigationState from "./src/AppWithNavigationState";
+import navReducer from "./src/reducers/navReducer";
+
+const store = getStore(navReducer);
+
+const StarterApp = () => {
+  return (
+    <Provider store={store}>
+      <AppWithNavigationState />
+    </Provider>
+  );
+};
 
 AppRegistry.registerComponent("dailydripStarterApp", () => StarterApp);
