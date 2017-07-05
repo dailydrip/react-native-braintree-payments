@@ -1,4 +1,7 @@
 import { AppRegistry } from "react-native";
-import App from "./src/App";
+import { DrawerNavigator } from "react-navigation";
+import Routes from "./routes";
 
-AppRegistry.registerComponent("dailydripStarterApp", () => App);
+const StarterApp = DrawerNavigator(Routes);
+
+AppRegistry.registerComponent("dailydripStarterApp", () => StarterApp);
