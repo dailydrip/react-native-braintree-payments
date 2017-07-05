@@ -1,12 +1,13 @@
 import { StyleSheet } from "react-native";
 import Metrics from "./Metrics";
+import Colors from "./Colors";
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#F5FCFF"
+    backgroundColor: Colors.background
   },
   welcome: {
     fontSize: 20,
@@ -15,7 +16,7 @@ export default StyleSheet.create({
   },
   instructions: {
     textAlign: "center",
-    color: "#333333",
+    color: Colors.text,
     marginBottom: Metrics.marginBottom
   }
 });
