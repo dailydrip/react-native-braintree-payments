@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import Metrics from "./Metrics";
 
 export default StyleSheet.create({
   container: {
@@ -10,11 +11,11 @@ export default StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: "center",
-    margin: 10
+    margin: Metrics.baseMargin
   },
   instructions: {
     textAlign: "center",
     color: "#333333",
-    marginBottom: 5
+    marginBottom: Metrics.marginBottom
   }
 });
